@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/logo.pngs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" 
+  integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Site Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  
+
+  <div class="popup">
+    <form >
+      <p id="EnterTag">Enter Tag :<span id="errorINP"></span></p>
+      <input type="text" id="Tags" maxlength="30" placeholder="Max 30 Words" required><br>
+      <label for="Tags">Enter Link :</label><br>
+      <input type="text" id="sites" placeholder="Enter Site Link" required><br>
+      <input type="button" class="btn1" id="submit" value="Submit">
+    </form>
+    <input type="button" class="btn1" id="cancel" value="Cancel">
+    
+  </div>
+
+  <div class="valid">
+    <h4>Do you want to delete this Link.</h4>
+    <button class="btn1" id="okdelete">Confirm</button>
+    <button class="btn1" id="cancelvalid">Cancel</button>
+  </div>
+
+  <div class="main ">
+    <div class="title">
+      <h3>SITE SAVER</h3>
+      <div class="options">
+        <h4>Tools</h4>
+           <div class="btn">
+            <button class="btn1" id="input-btn">Save INPUT</button>
+            <button class="btn1" id="tab-btn">Save TAB</button>
+            <button class="btn1" id="delete-btn">Delete All</button>
+           </div>
+      </div>
+    </div>
+    <div class="linkcon">
+      <h4 >Your Links</h4>
+        <div class="container">
+
+        </div>
+     </div>
+ </div>
+
+
+
+   <div class="toast">Copied</div>
+  <script src="myscript.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,298 @@
+:root {
+  --mycolor: #000000;
+}
+body{
+  margin: 0;
+  padding: 3px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: transparent;
+  width: 350px;
+}
+.main{
+   background-color: aliceblue;
+   border: 1px solid #4d4d4d;
+   margin: 0;
+   width: 100%-6px;
+   padding: 0;
+   overflow: hidden;
+   box-shadow: 0 0 5px #000000;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+.main .title{
+  margin: 0;
+  background-color: var(--mycolor);
+  color: aliceblue;
+  height: 85px;
+  border: 1px solid #4d4d4d;
+}
+
+.main .title h3{
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+.main .title .options{
+  display: inline-block;
+  margin: 15px 3%;
+  width: 94%;
+  height: 70px;
+  border: 1px solid var(--mycolor);
+  border-radius: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 0px 5px #000000;
+}
+.main .title .options h4{
+    color: Black;
+    font-size: 15px;
+    margin: 8px;
+    margin-left: 15px;
+}
+
+.main .title .options .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.main .linkcon{
+  height: 480px;
+  padding-top: 20px;
+  border: 1px solid #4d4d4d;
+  border-top: 0px;
+}
+
+.main .linkcon h4{
+    text-align: center;
+    color: Black;
+    font-size: 18px;
+    margin: 5px;
+    margin-top: 25px;
+}
+.main .linkcon .container{
+  height: 400px;
+  width: 324px;
+  margin: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.main .linkcon .value-con{
+  border: 2px solid var(--mycolor);
+  background-color: aliceblue;
+  border-left: 5px solid var(--mycolor);
+  border-radius:  5px 0;
+  height: 40px;
+  width: 300px;
+  margin: 15px 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 2px #000000;
+}
+
+.main .linkcon .value-con:hover{
+  box-shadow: 0px 0px 3px #000000;
+  background-color: rgb(252, 248, 243);
+}
+
+.main .linkcon .value-con .row{
+  max-width: 250px;
+  overflow: hidden;
+}
+.main .linkcon .value-con .row .tag{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 5px;
+  height: 20px;
+  margin: 0;
+}
+
+.main .linkcon .value-con .site{
+  position: relative;
+  font-size: 14px;
+  padding: 1px 5px;
+  height: 18px;
+  margin: 0;
+  top: -4px;
+  color: var(--mycolor);
+}
+
+.main .linkcon .value-con .tools{
+  color: aliceblue;
+  position: relative;
+  top: -42px;
+  left: 259px;
+}
+
+.main .linkcon .value-con .fa-arrow-right-long{
+  position: relative;
+  text-align: center;
+  top: -40px;
+  left: 255px;
+  font-size: 20px;
+  width: 50px;
+  height: 25px;
+  background-color: var(--mycolor);
+  border-radius: 5px 0 0 0;
+  color: aliceblue;
+  font-weight: bolder;
+}
+.main .linkcon .value-con .fa-arrow-right-long:hover{
+  background-color: #005fa8;
+}
+
+.fa-solid{
+  margin-right: 5px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+.fa-solid:hover{
+  color: #005fa8;
+}
+
+
+/* --------- Featured -------*/
+.btn1{
+   padding: 4px 2px;
+   width: 85px;
+   color: var(--mycolor);
+   font-weight: bold;
+   background-color: aliceblue;
+   border-radius: 5px;
+   border: 2px solid var(--mycolor);
+   margin: 0 10px;
+   box-shadow: 0 2px 5px #000000;
+   transition: all 0.1s ease-in-out;
+}
+.btn1:hover{
+   box-shadow: 0 3px 5px #000000;
+  background-color: rgb(252, 248, 243);
+}
+.btn1:active {
+  box-shadow: 0 0px 5px #000000;
+  transform: translateY(2px);
+  background-color: rgb(252, 248, 243);
+}
+.hidden{
+  display: none;
+}
+
+/* ---------- Poopup ---------*/
+
+.popup{
+  margin:0;
+  position: relative;
+  padding: 10px;
+  z-index: 10;
+  font-size: 12px;
+  background-color: aliceblue;
+  color: black;
+  position: absolute;
+  width: 325px;
+  height: 130px;
+  border: 3px solid var(--mycolor);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-180px);
+}
+
+.popup input{
+  border: 1px solid;
+  padding: 2px;
+  width: 300px;
+  background-color: aliceblue;
+  border: 2px solid #4d4d4d;
+  margin: 5px 0px;
+  border-radius: 2px;
+}
+.popup label{
+  font-size: 14px;
+  font-weight: bold;
+}
+.popup #EnterTag{
+   padding: 0;
+   margin: 0;
+   font-size: 14px;
+   font-weight: bold;
+}
+.popup .btn1{
+  margin: 5px 0;
+}
+#cancel,#submit{
+   width: 80px;
+}
+#cancel{
+  position: relative;
+  top: -34px;
+  left: 100px;
+}
+#errorINP{
+  color: red;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.valid{
+  margin:0;
+  position: relative;
+  padding: 10px;
+  z-index: 10;
+  font-size: 15px;
+  background-color: aliceblue;
+  color: black;
+  position: absolute;
+  width: 325px;
+  height: 100px;
+  border: 3px solid var(--mycolor);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-180px);
+}
+.valid h4{
+  text-align: center;
+  margin: 10px;
+}
+#okdelete{
+  position: relative;
+  left: 50px;
+}
+#cancelvalid{
+  position: relative;
+  left: 60px;
+}
+
+/* ------ Scroll ------- */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* ---------- Toast ----------*/
+.toast{
+  position: absolute;
+  width: 120px;
+  bottom: 7px;
+  text-align: center;
+  left: 32%;
+  padding: 3px;
+  color: #000000;
+  font-weight: bold;
+  background-color: aliceblue;
+  border: 2px solid var(--mycolor);
+  border-radius: 5px;
+  transform: translateY(+60px);
+  overflow: hidden;
+  transition: all 0.75s ease-in-out;
+}
