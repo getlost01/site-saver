@@ -1,21 +1,26 @@
 :root {
-  --mycolor: #000000;
+  --mycolor: #0a172f;
+  --bgcolor: #1e3155;
+  --concolor: #303444;
+  --fontcolor1: #87e0de;
+  --fontcolor2: #cdd9f1;
+  --bordercolor: #7c7c7c;
 }
 body{
   margin: 0;
   padding: 3px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: transparent;
+  background-color: var(--bgcolor);
   width: 350px;
+  height: 530px;
 }
 .main{
-   background-color: aliceblue;
-   border: 1px solid #4d4d4d;
+   background-color: black;
+   border: 1px solid var(--fontcolor1);
    margin: 0;
    width: 100%-6px;
    padding: 0;
    overflow: hidden;
-   box-shadow: 0 0 5px #000000;
 }
 a{
   text-decoration: none;
@@ -23,10 +28,10 @@ a{
 }
 .main .title{
   margin: 0;
-  background-color: var(--mycolor);
-  color: aliceblue;
+  background-color: #4285f4;
+  color: white;
   height: 85px;
-  border: 1px solid #4d4d4d;
+  border: 1px solid var(--bordercolor);
 }
 
 .main .title h3{
@@ -40,13 +45,13 @@ a{
   margin: 15px 3%;
   width: 94%;
   height: 70px;
-  border: 1px solid var(--mycolor);
+  border: 1px solid var(--bordercolor);
   border-radius: 5px;
-  background-color: aliceblue;
-  box-shadow: 0 0px 5px #000000;
+  background-color: var(--concolor);
+  box-shadow: 0 0 5px #000000;
 }
 .main .title .options h4{
-    color: Black;
+    color: var(--fontcolor2);
     font-size: 15px;
     margin: 8px;
     margin-left: 15px;
@@ -60,32 +65,32 @@ a{
 .main .linkcon{
   height: 480px;
   padding-top: 20px;
-  border: 1px solid #4d4d4d;
+  border: 1px solid var(--bordercolor);
   border-top: 0px;
 }
 
 .main .linkcon h4{
     text-align: center;
-    color: Black;
+    color: var(--fontcolor2);
     font-size: 18px;
     margin: 5px;
     margin-top: 25px;
 }
 .main .linkcon .container{
   height: 400px;
-  width: 324px;
+  width: 330px;
   margin: 5px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 .main .linkcon .value-con{
-  border: 2px solid var(--mycolor);
-  background-color: aliceblue;
-  border-left: 5px solid var(--mycolor);
-  border-radius:  5px 0;
+  border: 1px solid var(--bordercolor);
+  background-color: var(--concolor);
+  padding-top: 5px;
   height: 40px;
-  width: 300px;
-  margin: 15px 8px;
+  width: 305px;
+  margin: 10px 15px;
+  border-radius: 2px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -93,8 +98,9 @@ a{
 }
 
 .main .linkcon .value-con:hover{
-  box-shadow: 0px 0px 3px #000000;
-  background-color: rgb(252, 248, 243);
+  box-shadow: 0px 0px 5px var(--fontcolor1);
+  background-color: rgb(47, 47, 47);
+  border-color: var(--fontcolor1);
 }
 
 .main .linkcon .value-con .row{
@@ -104,6 +110,7 @@ a{
 .main .linkcon .value-con .row .tag{
   font-size: 14px;
   font-weight: 600;
+  color: var(--fontcolor1);
   padding: 2px 5px;
   height: 20px;
   margin: 0;
@@ -116,7 +123,7 @@ a{
   height: 18px;
   margin: 0;
   top: -4px;
-  color: var(--mycolor);
+  color: var(--fontcolor2);
 }
 
 .main .linkcon .value-con .tools{
@@ -129,27 +136,28 @@ a{
 .main .linkcon .value-con .fa-arrow-right-long{
   position: relative;
   text-align: center;
-  top: -40px;
+  top: -38px;
   left: 255px;
   font-size: 20px;
   width: 50px;
   height: 25px;
-  background-color: var(--mycolor);
+  background-color: transparent;
   border-radius: 5px 0 0 0;
-  color: aliceblue;
+  color: var(--fontcolor1);
   font-weight: bolder;
 }
 .main .linkcon .value-con .fa-arrow-right-long:hover{
-  background-color: #005fa8;
+  background-color: var(--fontcolor2);
+  color: var(--concolor);
 }
 
 .fa-solid{
   margin-right: 5px;
   font-size: 15px;
-  color: rgb(0, 0, 0);
+  color: var(--fontcolor1);
 }
 .fa-solid:hover{
-  color: #005fa8;
+  color: var(--fontcolor2);
 }
 
 
@@ -157,23 +165,19 @@ a{
 .btn1{
    padding: 4px 2px;
    width: 85px;
-   color: var(--mycolor);
-   font-weight: bold;
-   background-color: aliceblue;
+   color: white;
+   background-color: #4285f4;
    border-radius: 5px;
-   border: 2px solid var(--mycolor);
+   border: 1px solid var(--bordercolor);
    margin: 0 10px;
-   box-shadow: 0 2px 5px #000000;
    transition: all 0.1s ease-in-out;
 }
 .btn1:hover{
-   box-shadow: 0 3px 5px #000000;
-  background-color: rgb(252, 248, 243);
+  border-color: var(--fontcolor1);
+  background-color: #fe5f57;
 }
 .btn1:active {
-  box-shadow: 0 0px 5px #000000;
   transform: translateY(2px);
-  background-color: rgb(252, 248, 243);
 }
 .hidden{
   display: none;
@@ -187,24 +191,27 @@ a{
   padding: 10px;
   z-index: 10;
   font-size: 12px;
-  background-color: aliceblue;
-  color: black;
+  background-color: var(--concolor);
+  color: var(--fontcolor2);
   position: absolute;
   width: 325px;
   height: 130px;
-  border: 3px solid var(--mycolor);
+  border-top: 1px solid var(--bordercolor);
+  border-bottom: 3px solid var(--fontcolor1);
+  border-left: 3px solid var(--bordercolor);
+  border-right: 2px solid var(--bordercolor);
   transition: all 0.25s ease-in-out;
   transform: translateY(-180px);
 }
 
 .popup input{
   border: 1px solid;
-  padding: 2px;
+  padding: 3px;
   width: 300px;
-  background-color: aliceblue;
-  border: 2px solid #4d4d4d;
+  background-color: black;
+  border: 1px solid var(--bordercolor);
+  color: var(--fontcolor1);
   margin: 5px 0px;
-  border-radius: 2px;
 }
 .popup label{
   font-size: 14px;
@@ -218,6 +225,12 @@ a{
 }
 .popup .btn1{
   margin: 5px 0;
+  background-color: #4285f4;
+  color: rgb(255, 255, 255);
+}
+.popup .btn1:hover{
+  border-color: var(--fontcolor1);
+  background-color: #fe5f57;
 }
 #cancel,#submit{
    width: 80px;
@@ -228,9 +241,10 @@ a{
   left: 100px;
 }
 #errorINP{
-  color: red;
+  color: #ff8b8b;
   font-weight: 400;
   font-size: 14px;
+  padding-left: 5px;
 }
 
 .valid{
@@ -239,12 +253,15 @@ a{
   padding: 10px;
   z-index: 10;
   font-size: 15px;
-  background-color: aliceblue;
-  color: black;
+  background-color: var(--concolor);
+  color: var(--fontcolor2);
   position: absolute;
   width: 325px;
   height: 100px;
-  border: 3px solid var(--mycolor);
+  border-top: 1px solid var(--bordercolor);
+  border-bottom: 3px solid var(--fontcolor1);
+  border-left: 3px solid var(--bordercolor);
+  border-right: 2px solid var(--bordercolor);
   transition: all 0.25s ease-in-out;
   transform: translateY(-180px);
 }
