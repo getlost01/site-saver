@@ -1,4 +1,4 @@
-# Hello Reader
+# Site Saver
 :tada: First of all, thanks for visit our extension
 [Site Saver](https://chrome.google.com/webstore/detail/site-saver/bhfelhfpjghfmhogedjnlmdpkbhmjhlf?hl=en&authuser=0)! :tada:<br>
 
@@ -12,7 +12,7 @@
 ➡️ User can visit the corresponding site on just one click.</br>
 
 ## Preview
-<img width="355" alt="Screenshot 2022-06-05 at 1 47 31 PM" src="https://user-images.githubusercontent.com/79409258/172042461-2c7a0f65-53a8-471b-9f16-b5bdf7d2ead9.png">
+<img width="355" alt="Screenshot 2022-06-05 at 1 47 31 PM" src=https://github.com/getlost01/temp/blob/main/GIF-220624_201112.gif>
 
 ## Shortcut Key:<br>
 ☑️ For window , linux Press "Ctrl+Shift+8". <br>
