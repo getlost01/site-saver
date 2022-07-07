@@ -18,6 +18,20 @@ let site_objects=[];
 let flag_del=-1;
 let flag_edit=-1;
 
+tagVAL.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    submit.click();
+  }
+});
+
+siteVAL.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submit.click();
+    }
+});
+
 let sitefromls=JSON.parse(localStorage.getItem("sites"))
 if(sitefromls)
 {

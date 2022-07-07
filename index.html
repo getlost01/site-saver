@@ -16,29 +16,35 @@
 
 
 <body>
-  
+    
+  <div class="social">
+        <a href="https://github.com/getlost01/site-saver" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=creator.gl01@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/aagam-jain-gl01/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
 
   <div class="popup">
-    <form >
       <p id="EnterTag">Enter Tag :<span id="errorINP"></span></p>
-      <input type="text" id="Tags" maxlength="30" placeholder="Max 30 Words" required><br>
+      <input type="text" id="Tags" maxlength="30" placeholder="Max 30 Words" autofocus required><br>
       <label for="Tags">Enter Link :</label><br>
       <input type="text" id="sites" placeholder="Enter Site Link" required><br>
-      <input type="button" class="btn1" id="submit" value="Submit">
-    </form>
-    <input type="button" class="btn1" id="cancel" value="Cancel">
+      <div class="butCon">
+        <input type="button" class="btn1" id="submit" value="Submit">
+        <input type="button" class="btn1" id="cancel" value="Cancel">
+      </div>
+
     
   </div>
 
   <div class="valid">
     <h4>Do you want to delete this Link.</h4>
-    <button class="btn1" id="okdelete">Confirm</button>
+    <button class="btn1" id="okdelete" autofocus>Confirm</button>
     <button class="btn1" id="cancelvalid">Cancel</button>
   </div>
 
   <div class="main ">
     <div class="title">
-      <h3>SITE SAVER</h3>
+      <h3>Site Saver</h3>
       <div class="options">
         <h4>Tools</h4>
            <div class="btn">
