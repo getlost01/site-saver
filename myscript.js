@@ -12,6 +12,8 @@ var siteVAL = document.querySelector('#sites');
 var errorINP = document.querySelector('#errorINP');
 var container = document.querySelector('.container');
 var toast = document.querySelector('.toast');
+var searchBTN = document.querySelector('#searchBTN');
+var searchINP = document.querySelector('#searchString');
 
 let site_data=[];
 let site_objects=[];
@@ -32,7 +34,7 @@ siteVAL.addEventListener("keypress", function(event) {
     }
 });
 
-let sitefromls=JSON.parse(localStorage.getItem("sites"))
+let sitefromls=JSON.parse(localStorage.getItem("sites"));
 if(sitefromls)
 {
     site_data=sitefromls;
@@ -123,22 +125,29 @@ function check(ele){
 function render(){
     let listitem="";
     let tempid=[];
+    let tempStr;
     site_data.sort((a, b) => a[0].localeCompare(b[0], undefined, {sensitivity: 'base'}))
     for(let i=0;i<site_data.length;i++)
     {
+        tempStr = site_data[i][1].replace(/^https?:\/\//, '');
+        tempStr = tempStr.toLowerCase();
+        if(tempStr.length>30)
+        tempStr = tempStr .substring(0,30)+"...";
         listitem+=`
         <div class="value-con">
         <a href="${site_data[i][1]}" target="_blank">
          <div class="row">
-            <div class="tag">${site_data[i][0]}</div>
-            <div class="site">${site_data[i][1]}</div>
+            <input type="text" readonly class="tag" value="${site_data[i][0]}">
+            <input type="text" readonly class="site" value="${tempStr}">
          </div>
          </a>
            <div class="tools">
              <i class="fa-solid fa-pen-to-square" id="edit${i}" ></i>
              <i class="fa-solid fa-trash-can" id="delete${i}" ></i>
+             <div class="copy" id="ele${i}">
+             <i class="fa-solid fa-copy"></i>
+             </div>
            </div>
-             <i class="fa-solid fa-arrow-right-long" id="ele${i}"></i>
          </div>
       `;
     }
@@ -167,7 +176,7 @@ function render(){
          }))
     }
     site_objects=tempid;
-    console.log(site_objects);
+    // console.log(site_objects);
 }
 
 saveTAB.addEventListener('click',function(){
@@ -176,6 +185,53 @@ saveTAB.addEventListener('click',function(){
         popup.style.transform="translateY(0)";
     })
 })
+
+searchINP.addEventListener('input',()=>{
+    var check = searchINP.value.toUpperCase();
+    var data = JSON.parse(localStorage.getItem("sites"));
+    var listitem = ``,tempStr;
+    data.forEach(ele => {
+        if (ele[0].toUpperCase().indexOf(check) > -1) {
+            tempStr = ele[1].replace(/^https?:\/\//, '');
+            tempStr = tempStr.toLowerCase();
+            if(tempStr.length>30)
+            tempStr = tempStr .substring(0,30)+"...";
+
+            listitem+=`
+            <div class="value-con">
+            <a href="${ele[1]}" target="_blank">
+             <div class="row">
+                <input type="text" readonly class="tag" value="${ele[0]}">
+                <input type="text" readonly class="site" value="${tempStr}">
+             </div>
+             </a>
+               </div>
+             </div>
+          `;
+        }
+        })
+        if(listitem === ``){
+            listitem+=`
+            <div class="value-con">
+             <div class="row">
+                <input type="text" readonly class="tag" value="!! Not Found !!">
+                <input type="text" readonly class="site" value="Entered tag may not exist.">
+             </div>
+               </div>
+             </div>
+          `;
+        }
+        container.innerHTML=listitem;
+})
+
+searchBTN.addEventListener('focusout',()=>{
+    searchINP.value = "";
+    setTimeout(() => {
+        render();
+    }, 500);
+    // console.log("happen");
+})
+
 
 let toasttime;
 const show_toast=(msg)=>{
