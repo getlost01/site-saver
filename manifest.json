@@ -1,25 +1,20 @@
 {
-    "name": "Vibrant Color Dropper",
-    "description": "A Powerful Color Dropper Tool to extract Colors from a browser tab, and also save recent used colors.",
-    "version": "1.0.1.4",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
+    "manifest_version":3,
+    "version":"1.1.10.1",
+    "name":"Site Tracker",
+    "author": "Aagam Jain",    
+    "description": "This extension is useful to save your online sites/current tabs links in just one click.",         
+    "action":{
+        "default_popup":"index.html",
+        "default_icon":"logo.png"
     },
-    "action": {
-        "default_popup": "index.html",
-        "default_icon":"/images/clogo.png"
-    },
+    	
+    "homepage_url": "https://github.com/getlost01/site-saver-extension.github.io",
     "icons": {
-        "48": "/images/clogo.png",
-        "96":"/images/clogo.png"
+      "48": "logo.png",
+      "98": "logo.png"
     },
-    "commands": {
-        "_execute_action": {
-          "suggested_key": {
-            "default": "Ctrl+Shift+9",
-            "mac": "Command+Shift+9"
-          }
-        }
-      }
+	  "permissions":[
+	  "tabs"
+	  ]
 }
