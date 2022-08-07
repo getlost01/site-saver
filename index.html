@@ -1,73 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="images/logo.pngs">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" 
-  integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <title>Site Saver</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-
 <body>
-    
+
   <div class="social">
-        <a href="https://github.com/getlost01/site-saver" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=creator.gl01@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope-open"></i></a>
-        <a href="https://www.linkedin.com/in/aagam-jain-gl01/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
-
-  <div class="popup">
-      <p id="EnterTag">Enter Tag :<span id="errorINP"></span></p>
-      <input type="text" id="Tags" maxlength="30" placeholder="Max 30 Words" autofocus required><br>
-      <label for="Tags">Enter Link :</label><br>
-      <input type="text" id="sites" placeholder="Enter Site Link" required><br>
-      <div class="butCon">
-        <input type="button" class="btn1" id="submit" value="Submit">
-        <input type="button" class="btn1" id="cancel" value="Cancel">
-      </div>
-
-    
-  </div>
-
-  <div class="valid">
-    <h4>Do you want to delete this Link.</h4>
-    <button class="btn1" id="okdelete" autofocus>Confirm</button>
-    <button class="btn1" id="cancelvalid">Cancel</button>
-  </div>
-
-  <div class="main ">
-    <div class="title">
-      <h3>Site Saver</h3>
-      <div class="options">
-        <h4>Tools</h4>
-           <div class="btn">
-            <button class="btn1" id="input-btn">Save INPUT</button>
-            <button class="btn1" id="tab-btn">Save TAB</button>
-            <button class="btn1" id="delete-btn">Delete All</button>
-           </div>
-      </div>
-    </div>
-    <div class="linkcon">
-      <h4 >Your Links</h4>
-        <div class="container">
-
-        </div>
-     </div>
+    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=creator.gl01@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope-open"></i></a>
  </div>
 
+  <div class="title">
+    <h2 id="headerName">Color Dropper</h2>
+    <!-- <span id="result" ></span> -->
+  </div>
+  <div class="options">
+    <i class="fa-solid fa-circle-play" id="playBTN"></i>
+    <i class="fa-solid fa-house-chimney okActive" id="homeBTN"></i>
+    <i class="fa-solid fa-sliders" id="recent50BTN"></i>
+  </div>
+  
+  <div class="mainCON">
+    <div class="row">
+
+      <!-- playground section -->
+      <div class="playground hidden">
+          <div class="row">
+            <h4>Color Mixer</h4>
+                  <div class="col1">
+                        <p>Color1:</p>
+                         <input type="color" value="#000000" id="userColor1">
+                          <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="colorIN1">
+                            <p><span id="colorVal1">50%</span></p>
+                          </div>
+                    </div>
+
+                    <div class="col1">
+                           <p>Color2:</p>
+                          <input type="color" value="#000000"id="userColor2">
+                          <div class="slidecontainer">
+                              <input type="range" min="1" max="100" value="50" class="slider" id="colorIN2">
+                              <p><span id="colorVal2">50%</span></p>
+                          </div>
+                    </div>
+                    <div class="col1">
+                      <p>Result:</p>
+                       <div class="colorgrid" id="resultColor"></div>
+                       <div class="colorvalue" id="resultColorValue">#000000</div>
+               </div>
+          </div>
+
+          <div class="row">
+            <h4>Hex Value / RGB Value</h4>
+                <div class="col1">
+                    <input type="text" placeholder="Hex Value" minlength="6" maxlength="6" id="HEXvalue" value="000000">
+                    <h5>or</h5>
+                    <input type="number" placeholder="r" min="0" max="255"  maxlength="3" id="Rvalue" value="0">
+                    <input type="number" placeholder="g" min="0" max="255"  maxlength="3" id="Gvalue" value="0">
+                    <input type="number" placeholder="b" min="0" max="255"  maxlength="3" id="Bvalue" value="0">
+                </div>
+                <p class="res"><span id="hexRESULT">#000000</span> <i class="fa-solid fa-arrow-right-arrow-left"></i> <span id="RGBresult">rgb(0, 0, 0)</span> </p>
+          </div>
+      </div>
 
 
-   <div class="toast">Copied</div>
-  <script src="myscript.js"></script>
+   <!-- home section -->
+      <div class="home">
+
+        <div class="block">
+              <div class="incon">
+                <label >Choose Tool :</label>
+                  <select id="col">
+                      <option value="ele">Select</option>
+                      <option value="Eye">Eye Dropper</option>
+                      <option value="ColorC">Color Selector</option>
+                  </select>
+                  <input type="color" class="colcer" id="color" value="#303443" >
+              </div>
+              <div class="selectedColor">
+                  <div class="colorGrid copy"></div>
+                  <span class="colorValue copy">#000000</span>
+                  <div class="save">Save</div>
+              </div>
+        </div>
+
+        <div class="save-color">
+          <h4>Recent Saved</h4>
+          <div class="con">
+            <div class="row">
+              <div class="colorgrid" id="1"></div>
+              <div class="colorgrid" id="2"></div>
+              <div class="colorgrid" id="3"></div>
+              <div class="colorgrid" id="4"></div>
+              <div class="colorgrid" id="5"></div>
+              <div class="colorgrid" id="6"></div>
+              <div class="colorgrid" id="7"></div>
+              <div class="colorgrid" id="8"></div>
+              <div class="colorgrid" id="9"></div>
+              <div class="colorgrid" id="10"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent50 Section -->
+
+      <div class="recent50 hidden" >
+        <h4>Recent 50 Colors</h4>
+        <div class="save-color">
+          <div class="con">
+            <div class="row">
+              <div class="colorgrid" id="r1"></div>
+              <div class="colorgrid" id="r2"></div>
+              <div class="colorgrid" id="r3"></div>
+              <div class="colorgrid" id="r4"></div>
+              <div class="colorgrid" id="r5"></div>
+              <div class="colorgrid" id="r6"></div>
+              <div class="colorgrid" id="r7"></div>
+              <div class="colorgrid" id="r8"></div>
+              <div class="colorgrid" id="r9"></div>
+              <div class="colorgrid" id="r10"></div>
+              <div class="colorgrid" id="r11"></div>
+              <div class="colorgrid" id="r12"></div>
+              <div class="colorgrid" id="r13"></div>
+              <div class="colorgrid" id="r14"></div>
+              <div class="colorgrid" id="r15"></div>
+              <div class="colorgrid" id="r16"></div>
+              <div class="colorgrid" id="r17"></div>
+              <div class="colorgrid" id="r18"></div>
+              <div class="colorgrid" id="r19"></div>
+              <div class="colorgrid" id="r20"></div>
+              <div class="colorgrid" id="r21"></div>
+              <div class="colorgrid" id="r22"></div>
+              <div class="colorgrid" id="r23"></div>
+              <div class="colorgrid" id="r24"></div>
+              <div class="colorgrid" id="r25"></div>
+              <div class="colorgrid" id="r26"></div>
+              <div class="colorgrid" id="r27"></div>
+              <div class="colorgrid" id="r28"></div>
+              <div class="colorgrid" id="r29"></div>
+              <div class="colorgrid" id="r30"></div>
+              <div class="colorgrid" id="r31"></div>
+              <div class="colorgrid" id="r32"></div>
+              <div class="colorgrid" id="r33"></div>
+              <div class="colorgrid" id="r34"></div>
+              <div class="colorgrid" id="r35"></div>
+              <div class="colorgrid" id="r36"></div>
+              <div class="colorgrid" id="r37"></div>
+              <div class="colorgrid" id="r38"></div>
+              <div class="colorgrid" id="r39"></div>
+              <div class="colorgrid" id="r40"></div>
+              <div class="colorgrid" id="r41"></div>
+              <div class="colorgrid" id="r42"></div>
+              <div class="colorgrid" id="r43"></div>
+              <div class="colorgrid" id="r44"></div>
+              <div class="colorgrid" id="r45"></div>
+              <div class="colorgrid" id="r46"></div>
+              <div class="colorgrid" id="r47"></div>
+              <div class="colorgrid" id="r48"></div>
+              <div class="colorgrid" id="r49"></div>
+              <div class="colorgrid" id="r50"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+  
+  
+ <div class="toastCon"> <div class="toast"></div></div>
+ 
+    <script src="popup.js"></script>
 </body>
-
 </html>
-
-
